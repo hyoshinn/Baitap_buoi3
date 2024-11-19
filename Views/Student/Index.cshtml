@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Đăng ký chuyên ngành";
+}
+
+<h2>Đăng ký chuyên ngành</h2>
+
+@using (Html.BeginForm("ShowKQ", "Student", FormMethod.Post))
+{
+    <div>
+        <label for="mssv">MSSV:</label>
+        <input type="text" id="mssv" name="mssv" required />
+    </div>
+    <div>
+        <label for="hoTen">Họ tên:</label>
+        <input type="text" id="hoTen" name="hoTen" required />
+    </div>
+    <div>
+        <label for="diemTB">Điểm TB:</label>
+        <input type="number" id="diemTB" name="diemTB" required />
+    </div>
+    <div>
+        <label for="chuyenNganh">Chuyên ngành:</label>
+        <select id="chuyenNganh" name="chuyenNganh" required>
+            <option value="CNPM">CNPM</option>
+            <option value="HTTT">HTTT</option>
+            <option value="ANM">ANM</option>
+            <option value="TTNT">TTNT</option>
+            <option value="MMT">MMT</option>
+        </select>
+    </div>
+    <button type="submit">Đăng ký</button>
+}
